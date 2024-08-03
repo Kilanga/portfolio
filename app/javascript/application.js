@@ -3,3 +3,8 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
+import "@fortawesome/fontawesome-free/js/all"
+
+
+import { Turbo } from "@hotwired/turbo-rails"
+Turbo.session.drive = true
