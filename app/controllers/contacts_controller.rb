@@ -1,15 +1,13 @@
 class ContactsController < ApplicationController
-  def new
-    @contact = Contact.new
-  end
-
   def create
     @contact = Contact.new(contact_params)
-    if @contact.valid?
+    if @contact.save
+      Rails.logger.info "Contact sauvegardé avec succès : #{@contact.inspect}"
       ContactMailer.contact_email(@contact).deliver_now
-      redirect_to new_contact_path, notice: 'Votre message a été envoyé avec succès!'
+      flash[:notice] = "Votre message a été envoyé avec succès."
+      redirect_to new_contact_path
     else
-      flash.now[:alert] = 'Veuillez corriger les erreurs dans le formulaire.'
+      flash.now[:alert] = "Il y a eu un problème lors de l'envoi de votre message."
       render :new
     end
   end
