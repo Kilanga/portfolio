@@ -1,5 +1,3 @@
-# app/controllers/contacts_controller.rb
-
 class ContactsController < ApplicationController
   def new
     @contact = Contact.new
@@ -7,9 +5,11 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    if @contact.save
-      redirect_to root_path, notice: 'Votre message a été envoyé avec succès.'
+    if @contact.valid?
+      ContactMailer.contact_email(@contact).deliver_now
+      redirect_to new_contact_path, notice: 'Votre message a été envoyé avec succès!'
     else
+      flash.now[:alert] = 'Veuillez corriger les erreurs dans le formulaire.'
       render :new
     end
   end

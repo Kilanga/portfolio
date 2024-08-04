@@ -1,15 +1,31 @@
-<div class="container mt-5">
-  <h1>Contactez-moi</h1>
-  <%= simple_form_for @contact do |f| %>
-    <div class="form-group">
-      <%= f.input :name, label: "Nom" %>
+<h1>Contactez-nous</h1>
+
+<%= form_with model: @contact, local: true do |form| %>
+  <% if @contact.errors.any? %>
+    <div class="alert alert-danger">
+      <h4>Erreurs :</h4>
+      <ul>
+        <% @contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
     </div>
-    <div class="form-group">
-      <%= f.input :email, label: "Email" %>
-    </div>
-    <div class="form-group">
-      <%= f.input :message, label: "Message", as: :text %>
-    </div>
-    <%= f.submit "Envoyer", class: "btn btn-primary" %>
   <% end %>
-</div>
+
+  <div class="mb-3">
+    <%= form.label :name, "Nom" %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Votre nom" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :email, "Email" %>
+    <%= form.email_field :email, class: "form-control", placeholder: "Votre email" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :message, "Message" %>
+    <%= form.text_area :message, class: "form-control", placeholder: "Votre message", rows: 5 %>
+  </div>
+
+  <%= form.submit "Envoyer", class: "btn btn-primary" %>
+<% end %>

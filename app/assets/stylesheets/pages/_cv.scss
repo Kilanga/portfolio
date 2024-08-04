@@ -35,7 +35,7 @@
 
   .profile-image {
     width: 250px; /* Ajustez la taille de l'image ici */
-    height: 180px; /* Assurez-vous que l'image reste proportionnelle */
+    height: 170px; /* Assurez-vous que l'image reste proportionnelle */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
   }
@@ -52,10 +52,12 @@
   .experience-item,
   .education,
   .languages,
-  .firefighter {
+  .firefighter,
+  .development-skills {
     margin-bottom: 30px;
 
-    h3.job-title {
+    h3.job-title,
+    h3 {
       font-size: 1.4rem;
       font-weight: 600;
       color: #444;

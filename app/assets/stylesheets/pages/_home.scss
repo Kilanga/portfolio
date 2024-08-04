@@ -1,32 +1,17 @@
-.panel {
-  position: fixed; /* Recouvre tout l'écran */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #f7f7f7;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s ease-in-out;
-  z-index: 10;
-  cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
-}
 
 .real-home {
-  position: absolute;
-  top: 100vh; /* Initialement caché */
+  position: relative; /* Change de 'absolute' à 'relative' */
+  top: 0; /* Assurez-vous que 'top' est 0 */
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: auto; /* Ajustez la hauteur selon votre contenu */
   background-color: white;
-  transition: top 0.5s ease-in-out;
+  transition: none; /* Supprime la transition */
   z-index: 5;
 }
 
 .hidden {
-  display: none;
+  display: none; /* Utilisé pour cacher des éléments si nécessaire */
 }
 
 h1 {
@@ -39,11 +24,13 @@ h1 {
 
 .typography-animation {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f7f7f7;
   color: #333;
+  gap: 20px;
 }
 
 .animated-text {
@@ -51,24 +38,5 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid orange;
-  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
+  animation: none; /* Supprime l'animation */
 }
