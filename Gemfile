@@ -51,6 +51,7 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem 'devise'
 gem 'cloudinary', '~> 1.24.0'
+gem 'mail'
 
 group :development, :test do
   gem "dotenv-rails"
