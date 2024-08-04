@@ -5,9 +5,11 @@
 
 // External libraries
 @import "bootstrap";
-@import "font-awesome";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css');
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 @import "pages/navbar";
+@import "pages/home";
+@import "pages/cv";

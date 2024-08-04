@@ -1,0 +1,126 @@
+<!-- app/views/pages/cv.html.erb -->
+
+<div class="container cv-page mt-5 mb-5">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+      <h1 class="cv-name">Arnaud LOTHE</h1>
+      <ul class="list-unstyled personal-info">
+        <li><i class="fas fa-map-marker-alt"></i> 156 Av. Daumesnil, 75012 Paris</li>
+        <li><i class="fas fa-birthday-cake"></i> Né le 15 juin 1994 à Lyon</li>
+        <li><i class="fas fa-phone"></i> 06 66 95 18 71</li>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:arnaud.lothe@gmail.com" class="email-link">arnaud.lothe@gmail.com</a>
+        </li>
+        <li><i class="fas fa-car"></i> Permis B</li>
+      </ul>
+    </div>
+    <div class="col-md-4 text-md-end text-center">
+      <img src="<%= asset_path('profile.jpg') %>" alt="Arnaud LOTHE" class="img-fluid rounded-circle profile-image" width="200">
+    </div>
+  </div>
+
+  <hr class="my-4">
+
+  <section class="experience">
+    <h2 class="section-title">Expériences Professionnelles</h2>
+
+    <div class="experience-item mt-3">
+      <h3 class="job-title">Ingénieur Optimisation et Supervision</h3>
+      <p class="company-name">Entreprise : AKKODIS pour NETSF & Rhôn Telecom</p>
+      <p class="date-range">Mars 2023 – Octobre 2024</p>
+      <ul class="list-unstyled">
+        <li>Ingénierie radio</li>
+        <li>Support et formation des superviseurs</li>
+        <li>Ingénierie fixe suite à formation par le client</li>
+        <li>Analyse de KPIs radio</li>
+        <li>Pilotage des ICR (Incidents Critiques Réseaux)</li>
+        <li>Optimisation par Cluster géographiques</li>
+        <li>Participation active aux REX ICR</li>
+        <li>Participation à l’amélioration continue</li>
+      </ul>
+    </div>
+
+    <div class="experience-item mt-4">
+      <h3 class="job-title">Chef de Projet Maintenance</h3>
+      <p class="company-name">Entreprise : AXIONE pour BOUYGUES TELECOM et GRDF</p>
+      <p class="date-range">Mars 2022 – Mars 2023</p>
+      <ul class="list-unstyled">
+        <li>Gestion de portefeuille (110K€/mois)</li>
+        <li>Suivi de bout en bout d'IMES radio</li>
+        <li>Réalisation de devis</li>
+        <li>Mise en place de planning (200 interventions/mois)</li>
+        <li>Suivi de facturation et comptabilité</li>
+        <li>Gestion d’une équipe de 10 techniciens</li>
+        <li>Reporting d’activité</li>
+        <li>Réalisation de prévisionnel d’activité</li>
+      </ul>
+    </div>
+
+    <div class="experience-item mt-4">
+      <h3 class="job-title">Chargé de Production</h3>
+      <p class="company-name">Entreprise : RHON’ TELECOM pour SFR</p>
+      <p class="date-range">Novembre 2018 – Mars 2022</p>
+      <ul class="list-unstyled">
+        <li>Ingénierie qualité de service</li>
+        <li>Analyse de KPIs</li>
+        <li>Création d’intervention</li>
+        <li>Gestion de tickets bloquants</li>
+        <li>Création et mise à jour des process</li>
+        <li>Automatisation des processus (Business Object)</li>
+        <li>Intervention à distance par OMC</li>
+        <li>Reporting d’activité</li>
+      </ul>
+    </div>
+
+    <div class="experience-item mt-4">
+      <h3 class="job-title">Technicien d’Exploitation Telecom</h3>
+      <p class="company-name">Entreprise : BOUYGUES TELECOM</p>
+      <p class="date-range">Août 2014 - Novembre 2018</p>
+      <ul class="list-unstyled">
+        <li>BTS SIO en alternance jusqu’en juillet 2017 - École : SEPR et AFIP</li>
+        <li>Puis Technicien d’Exploitation Telecom</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="my-4">
+
+  <section class="education">
+    <h2 class="section-title">Formations</h2>
+
+    <ul class="list-unstyled">
+      <li><i class="fas fa-graduation-cap"></i> 2024 : Titre RNCP « Concepteur développeur d’application web – Niveau 6 »</li>
+      <li><i class="fas fa-graduation-cap"></i> 2017 : BTS SIO</li>
+    </ul>
+  </section>
+
+  <hr class="my-4">
+
+  <section class="languages">
+    <h2 class="section-title">Langues</h2>
+
+    <ul class="list-unstyled">
+      <li><i class="fas fa-language"></i> Français : Langue natale</li>
+      <li><i class="fas fa-language"></i> Anglais : Niveau C1</li>
+    </ul>
+  </section>
+
+  <hr class="my-4">
+
+  <section class="firefighter">
+    <h2 class="section-title">Autre Expérience</h2>
+
+    <ul class="list-unstyled">
+      <li><i class="fas fa-fire"></i> 2011 à 2023 : Sapeur Pompier Volontaire, Caserne de Satolas et Bonce (Caporal-Chef)</li>
+    </ul>
+  </section>
+
+  <hr class="my-4">
+
+  <section class="download">
+    <h2 class="section-title">Télécharger le CV</h2>
+    <p>Vous pouvez télécharger mon CV complet en PDF :</p>
+    <%= link_to 'Télécharger le CV (PDF)', asset_path('cv.pdf'), class: 'btn btn-primary' %>
+  </section>
+</div>
