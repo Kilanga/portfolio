@@ -17,6 +17,13 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
 
+  # Ensures that assets are compiled in development mode
+  config.assets.debug = true
+  config.assets.compile = true
+
+  # Serve static files from the /public directory.
+  config.public_file_server.enabled = true
+
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join("tmp/caching-dev.txt").exist?
