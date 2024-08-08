@@ -52,6 +52,7 @@ gem "sassc-rails"
 gem 'devise'
 gem 'cloudinary', '~> 1.24.0'
 gem 'mail'
+gem 'jquery-rails'
 
 group :development, :test do
   gem "dotenv-rails"

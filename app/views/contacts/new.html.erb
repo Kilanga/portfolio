@@ -1,4 +1,4 @@
-<h1>Contactez-nous</h1>
+<h1>Contactez-moi</h1>
 
 <%= form_with model: @contact, local: true do |form| %>
   <% if @contact.errors.any? %>
@@ -29,3 +29,22 @@
 
   <%= form.submit "Envoyer", class: "btn btn-primary" %>
 <% end %>
+
+<!-- Modale de confirmation -->
+
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true" data-modal-target="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmationModalLabel">Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Merci, votre message a bien été envoyé.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
