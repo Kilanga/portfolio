@@ -1,42 +1,103 @@
-
-.real-home {
-  position: relative; /* Change de 'absolute' à 'relative' */
-  top: 0; /* Assurez-vous que 'top' est 0 */
-  left: 0;
-  width: 100%;
-  height: auto; /* Ajustez la hauteur selon votre contenu */
-  background-color: white;
-  transition: none; /* Supprime la transition */
-  z-index: 5;
-}
-
-.hidden {
-  display: none; /* Utilisé pour cacher des éléments si nécessaire */
-}
-
-h1 {
-  font-size: 2em;
-  color: #333;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-}
-
-.typography-animation {
+#banner {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  background: url('/assets/home_background.jpg') no-repeat center center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f7f7f7;
-  color: #333;
-  gap: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.animated-text {
-  font-size: 3em;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.15em solid orange;
-  animation: none; /* Supprime l'animation */
+#banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+#banner * {
+  position: relative;
+  z-index: 2;
+}
+
+#banner h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.2em;
+}
+
+#banner p {
+  font-size: 1.25em;
+  margin-bottom: 1.5em;
+}
+
+.banner-buttons .btn {
+  padding: 0.75em 1.5em;
+  font-size: 1.25em;
+}
+
+.banner-buttons .btn-outline-custom {
+  border-color: white;
+  color: white;
+}
+
+.banner-buttons .btn-outline-custom:hover {
+  background-color: white;
+  color: #333;
+}
+
+.tech-icon-container {
+  position: relative;
+  text-align: center;
+}
+
+.tech-icon {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+.tech-name {
+  position: absolute;
+  top: 85%; /* Place le texte juste en dessous de l'icône */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 1em;
+  color: #333;
+  margin-top: 5px;
+}
+
+.tech-icon-container:hover .tech-icon {
+  transform: translateY(-10px); /* Soulève légèrement l'icône */
+}
+
+.tech-icon-container:hover .tech-name {
+  opacity: 1;
+}
+
+/* Ajustements pour les tailles d'écran plus grandes */
+@media (min-width: 768px) {
+  .tech-icon {
+    width: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tech-icon {
+    width: 100px;
+    margin-right: 20px;
+  }
 }

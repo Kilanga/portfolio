@@ -14,6 +14,7 @@
       font-size: 1rem;
       margin-bottom: 10px;
       color: #555;
+
       i {
         color: #007bff;
         margin-right: 8px;
@@ -31,13 +32,6 @@
         }
       }
     }
-  }
-
-  .profile-image {
-    width: 250px; /* Ajustez la taille de l'image ici */
-    height: 180px; /* Assurez-vous que l'image reste proportionnelle */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
   }
 
   .section-title {
@@ -106,6 +100,20 @@
     }
   }
 
+  .development-skills ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .development-skills ul li {
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .development-skills ul li:before {
+    content: none;
+  }
+
   .download {
     p {
       font-size: 1rem;
@@ -124,5 +132,12 @@
         background-color: #0056b3;
       }
     }
+
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .profile-image {
+    display: none;
   }
 }

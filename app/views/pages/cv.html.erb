@@ -13,10 +13,48 @@
         <li><i class="fas fa-car"></i> Permis B</li>
       </ul>
     </div>
+
+    <!-- Replacing the image with the download link -->
     <div class="col-md-4 text-md-end text-center">
-      <img src="<%= asset_path('profile.jpg') %>" alt="Arnaud LOTHE" class="img-fluid rounded-circle profile-image" width="250">
+      <section class="download">
+        <h2 class="section-title">Télécharger le CV</h2>
+        <p>Vous pouvez télécharger mon CV complet en PDF :</p>
+        <%= link_to 'Télécharger le CV (PDF)', asset_path('cv.pdf'), class: 'btn btn-primary' %>
+      </section>
     </div>
   </div>
+
+  <hr class="my-4">
+
+  <section class="development-skills">
+    <h2 class="section-title">Compétences en Développement</h2>
+
+    <div class="skill-category mt-3">
+      <h3>Développement Back-End et Bases de Données</h3>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-code"></i> <strong>Fondamentaux de la Programmation :</strong> Compréhension des bases de la programmation et écriture de code robuste.</li>
+        <li><i class="fas fa-cube"></i> <strong>Programmation Orientée Objet avec Ruby :</strong> Maîtrise de Ruby pour créer des applications web en architecture MVC (Model-View-Controller).</li>
+        <li><i class="fas fa-database"></i> <strong>Bases de Données Relationnelles et SQL :</strong> Compétences avancées dans la gestion de bases de données et l'utilisation de PostgreSQL pour manipuler des données.</li>
+      </ul>
+    </div>
+
+    <div class="skill-category mt-4">
+      <h3>Développement Front-End et Web Design</h3>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-user-check"></i> <strong>Validation de l'Expérience Utilisateur (UX) :</strong> Utilisation de Figma pour valider et concevoir des interfaces utilisateurs.</li>
+        <li><i class="fas fa-desktop"></i> <strong>Développement de Pages Web Réactives :</strong> Création de pages web réactives avec HTML, CSS et JavaScript (Vue.js et Stimulus).</li>
+      </ul>
+    </div>
+
+    <div class="skill-category mt-4">
+      <h3>Déploiement d'Applications</h3>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-cloud-upload-alt"></i> <strong>Mise en Production d'Applications :</strong> Déploiement d'applications web complètes sur un domaine réel.</li>
+        <li><i class="fas fa-users"></i> <strong>Organisation du Travail en Équipe :</strong> Collaboration sur GitHub et gestion du code en équipe.</li>
+        <li><i class="fas fa-code-branch"></i> <strong>Développement Complet avec Ruby on Rails et JavaScript :</strong> Utilisation de Ruby on Rails pour développer des applications web intégrales.</li>
+      </ul>
+    </div>
+  </section>
 
   <hr class="my-4">
 
@@ -84,38 +122,6 @@
 
   <hr class="my-4">
 
-  <section class="development-skills">
-    <h2 class="section-title">Compétences en Développement</h2>
-
-    <div class="skill-category mt-3">
-      <h3>Développement Back-End et Bases de Données</h3>
-      <ul class="list-unstyled">
-        <li><i class="fas fa-code"></i> <strong>Fondamentaux de la Programmation :</strong> Compréhension des bases de la programmation et écriture de code robuste.</li>
-        <li><i class="fas fa-cube"></i> <strong>Programmation Orientée Objet avec Ruby :</strong> Maîtrise de Ruby pour créer des logiciels en architecture MVC (Model-View-Controller).</li>
-        <li><i class="fas fa-database"></i> <strong>Bases de Données Relationnelles et SQL :</strong> Compétences avancées dans la gestion de bases de données et l'utilisation de PostgreSQL pour manipuler des données.</li>
-      </ul>
-    </div>
-
-    <div class="skill-category mt-4">
-      <h3>Développement Front-End et Web Design</h3>
-      <ul class="list-unstyled">
-        <li><i class="fas fa-user-check"></i> <strong>Validation de l'Expérience Utilisateur (UX) :</strong> Utilisation de Figma pour valider et concevoir des interfaces utilisateurs.</li>
-        <li><i class="fas fa-desktop"></i> <strong>Développement de Pages Web Réactives :</strong> Création de pages web réactives avec HTML, CSS et JavaScript (Vue.js et Stimulus).</li>
-      </ul>
-    </div>
-
-    <div class="skill-category mt-4">
-      <h3>Déploiement d'Applications</h3>
-      <ul class="list-unstyled">
-        <li><i class="fas fa-cloud-upload-alt"></i> <strong>Mise en Production d'Applications :</strong> Déploiement d'applications web complètes sur un domaine réel.</li>
-        <li><i class="fas fa-users"></i> <strong>Organisation du Travail en Équipe :</strong> Collaboration sur GitHub et gestion du code en équipe.</li>
-        <li><i class="fas fa-code-branch"></i> <strong>Développement Complet avec Ruby on Rails et JavaScript :</strong> Utilisation de Ruby on Rails pour développer des applications web intégrales.</li>
-      </ul>
-    </div>
-  </section>
-
-  <hr class="my-4">
-
   <section class="education">
     <h2 class="section-title">Formations</h2>
 
@@ -144,13 +150,5 @@
     <ul class="list-unstyled">
       <li><i class="fas fa-fire"></i> 2011 à 2023 : Sapeur Pompier Volontaire, Caserne de Satolas et Bonce (Caporal-Chef)</li>
     </ul>
-  </section>
-
-  <hr class="my-4">
-
-  <section class="download">
-    <h2 class="section-title">Télécharger le CV</h2>
-    <p>Vous pouvez télécharger mon CV complet en PDF :</p>
-    <%= link_to 'Télécharger le CV (PDF)', asset_path('cv.pdf'), class: 'btn btn-primary' %>
   </section>
 </div>

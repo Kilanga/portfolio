@@ -7,11 +7,15 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       ContactMailer.contact_email(@contact).deliver_now
-      flash[:notice] = "Votre message a été envoyé avec succès."
-      redirect_to new_contact_path
+      respond_to do |format|
+        format.html { redirect_to new_contact_path, notice: 'Message envoyé avec succès.' }
+        format.json { render json: { message: 'Message envoyé avec succès.' }, status: :created }
+      end
     else
-      flash.now[:alert] = "Il y a eu un problème lors de l'envoi de votre message."
-      render :new
+      respond_to do |format|
+        format.html { render :new }
+        format.json { render json: @contact.errors, status: :unprocessable_entity }
+      end
     end
   end
 
