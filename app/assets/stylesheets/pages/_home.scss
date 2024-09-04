@@ -2,7 +2,7 @@
   position: relative;
   width: 100vw;
   height: 60vh;
-  background: url('/assets/home_background.jpg') no-repeat center center;
+  background: asset-url('home_background.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
