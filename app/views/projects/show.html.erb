@@ -1,7 +1,26 @@
 <div class="container mt-5">
   <h1><%= @project.title %></h1>
-  <%= image_tag @project.image, class: "img-fluid mb-4", alt: @project.title %>
   <p><%= @project.description %></p>
-  <%= link_to "Voir le projet en ligne", @project.link, target: "_blank", class: "btn btn-primary" %>
-  <%= link_to "Retour aux projets", projects_path, class: "btn btn-secondary mt-2" %>
+
+  <div class="mb-4">
+    <% if @project.image.attached? %>
+      <%= image_tag @project.image.variant(resize_to_limit: [600, 400]), alt: @project.title, class: "img-fluid" %>
+    <% end %>
+  </div>
+
+  <h3>Technologies utilisées :</h3>
+  <div class="tech-icons row justify-content-start">
+    <% if @technologies.present? %>
+      <% @technologies.each do |tech| %>
+        <div class="col-6 col-md-4 col-lg-2 mb-4 tech-icon-container">
+          <%= image_tag @tech_images[tech], alt: tech, class: "tech-icon" %>
+          <span class="tech-name"><%= tech %></span>
+        </div>
+      <% end %>
+    <% else %>
+      <p>Aucune technologie sélectionnée pour ce projet.</p>
+    <% end %>
+  </div>
+
+  <%= link_to "Retour aux projets", projects_path, class: "btn btn-secondary mt-3" %>
 </div>

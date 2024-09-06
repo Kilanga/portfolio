@@ -53,9 +53,9 @@ gem 'devise'
 gem 'cloudinary', '~> 1.24.0'
 gem 'mail'
 gem 'jquery-rails'
+gem "dotenv-rails"
 
 group :development, :test do
-  gem "dotenv-rails"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
 end

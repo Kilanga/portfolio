@@ -1,5 +1,3 @@
-# app/controllers/projects_controller.rb
-
 class ProjectsController < ApplicationController
   def index
     @projects = Project.all
@@ -7,5 +5,8 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+
+    # Convertir la chaîne de caractères des technologies en tableau pour l'affichage
+    @technologies = @project.technologies.split(',') if @project.technologies.present?
   end
 end
