@@ -1,34 +1,37 @@
-<h1>Contactez-moi</h1>
+<div class="contact-card card shadow-lg">
+  <div class="card-body">
+    <h1 class="contact-header card-title">Contactez-moi</h1>
+    <%= form_with model: @contact, local: true, data: { controller: "modal", modal_target: "form", action: "submit->modal#submit" } do |form| %>
+      <% if @contact.errors.any? %>
+        <div class="alert alert-danger">
+          <h4>Erreurs :</h4>
+          <ul>
+            <% @contact.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-<%= form_with model: @contact, local: true, data: { controller: "modal", modal_target: "form", action: "submit->modal#submit" } do |form| %>
-  <% if @contact.errors.any? %>
-    <div class="alert alert-danger">
-      <h4>Erreurs :</h4>
-      <ul>
-        <% @contact.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <div class="mb-3 form-group">
+        <%= form.label :name, "Nom", class: "form-label" %>
+        <%= form.text_field :name, class: "form-control form-input", placeholder: "Votre nom" %>
+      </div>
 
-  <div class="mb-3">
-    <%= form.label :name, "Nom" %>
-    <%= form.text_field :name, class: "form-control", placeholder: "Votre nom" %>
+      <div class="mb-3 form-group">
+        <%= form.label :email, "Email", class: "form-label" %>
+        <%= form.email_field :email, class: "form-control form-input", placeholder: "Votre email" %>
+      </div>
+
+      <div class="mb-3 form-group">
+        <%= form.label :message, "Message", class: "form-label" %>
+        <%= form.text_area :message, class: "form-control form-input", placeholder: "Votre message", rows: 5 %>
+      </div>
+
+      <%= form.submit "Envoyer", class: "btn btn-primary btn-submit" %>
+    <% end %>
   </div>
-
-  <div class="mb-3">
-    <%= form.label :email, "Email" %>
-    <%= form.email_field :email, class: "form-control", placeholder: "Votre email" %>
-  </div>
-
-  <div class="mb-3">
-    <%= form.label :message, "Message" %>
-    <%= form.text_area :message, class: "form-control", placeholder: "Votre message", rows: 5 %>
-  </div>
-
-  <%= form.submit "Envoyer", class: "btn btn-primary" %>
-<% end %>
+</div>
 
 <!-- Modale de confirmation -->
 <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true" data-controller="modal" data-modal-target="modal">
