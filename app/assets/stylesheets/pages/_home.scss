@@ -56,58 +56,75 @@
   color: #333;
 }
 
-.tech-icon-container {
-  position: relative;
+.home-tech-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacement entre les icônes */
+}
+
+/* Conteneur individuel pour chaque icône technologique */
+.home-tech-icon-container {
+  flex: 0 0 100px; /* Taille fixe pour chaque conteneur */
   text-align: center;
-
-  .tech-name {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    font-size: 1em;
-    color: #333;
-    margin-top: 5px;
-  }
+  position: relative; /* Position relative pour gérer l'overlay du nom */
+  margin-bottom: 60px; /* Ajout d'un plus grand espace entre les lignes */
 }
 
-
-
-
-.tech-icon-container:hover .tech-icon {
-  transform: translateY(-10px);
-}
-
-.tech-icon-container:hover .tech-name {
-  opacity: 1;
-}
-
-/* Nouvelle classe spécifique pour les icônes de la page d'accueil */
+/* Style des images des icônes */
 .home-tech-icon {
+  width: 100px; /* Largeur des icônes */
+  height: 100px; /* Hauteur égale pour une meilleure proportion */
   border: 2px solid #fff; /* Bordure blanche autour des icônes */
   border-radius: 10px; /* Coins légèrement arrondis */
   padding: 5px; /* Espace autour des icônes */
   transition: all 0.3s ease-in-out; /* Transition fluide pour les effets de hover */
 }
 
+/* Effet au survol des icônes */
 .home-tech-icon:hover {
-  transform: scale(1.1); /* Agrandir légèrement l'icône au survol */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Ajouter une ombre */
+  transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Ombre pour donner de la profondeur */
 }
 
-/* Ajustements pour les tailles d'écran plus grandes */
+/* Nom des technologies sous les icônes (caché par défaut) */
+.home-tech-name {
+  position: absolute;
+  bottom: -35px; /* Espace augmenté entre l'icône et le nom */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* Caché par défaut */
+  transition: opacity 0.3s ease-in-out; /* Transition pour faire apparaître le nom */
+  font-size: 1em;
+  color: #333;
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  overflow: hidden; /* Coupe le texte si trop long */
+  text-overflow: ellipsis; /* Affiche des points de suspension si le texte est trop long */
+  max-width: 120px; /* Largeur maximale pour le nom de la technologie */
+}
+
+/* Afficher le nom au survol de l'icône */
+.home-tech-icon-container:hover .home-tech-name {
+  opacity: 1; /* Le texte devient visible au survol */
+}
+
 @media (min-width: 768px) {
-  .tech-icon {
-    width: 80px;
+  .home-tech-icon-container {
+    flex: 0 0 120px; /* Taille plus grande sur les écrans moyens */
+  }
+
+  .home-tech-name {
+    max-width: 140px; /* Largeur maximale plus grande sur les écrans moyens */
   }
 }
 
 @media (min-width: 1200px) {
-  .tech-icon {
-    width: 100px;
-    margin-right: 20px;
+  .home-tech-icon-container {
+    flex: 0 0 140px; /* Taille encore plus grande pour les écrans larges */
+  }
+
+  .home-tech-name {
+    max-width: 160px; /* Largeur maximale plus grande sur les écrans larges */
   }
 }
 
