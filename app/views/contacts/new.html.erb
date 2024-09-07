@@ -1,4 +1,4 @@
-<div class="contact-card card shadow-lg">
+<div class="contact-card card">
   <div class="card-body">
     <h1 class="contact-header card-title">Contactez-moi</h1>
     <%= form_with model: @contact, local: true, data: { controller: "modal", modal_target: "form", action: "submit->modal#submit" } do |form| %>
@@ -14,17 +14,14 @@
       <% end %>
 
       <div class="mb-3 form-group">
-        <%= form.label :name, "Nom", class: "form-label" %>
         <%= form.text_field :name, class: "form-control form-input", placeholder: "Votre nom" %>
       </div>
 
       <div class="mb-3 form-group">
-        <%= form.label :email, "Email", class: "form-label" %>
         <%= form.email_field :email, class: "form-control form-input", placeholder: "Votre email" %>
       </div>
 
       <div class="mb-3 form-group">
-        <%= form.label :message, "Message", class: "form-label" %>
         <%= form.text_area :message, class: "form-control form-input", placeholder: "Votre message", rows: 5 %>
       </div>
 
