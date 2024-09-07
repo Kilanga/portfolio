@@ -1,0 +1,57 @@
+.project-cards-container {
+  padding: 20px;
+}
+
+.project-card {
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  overflow: hidden; /* Empêche tout débordement de contenu à l'extérieur de la carte */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-img {
+  border-radius: 8px;
+  width: calc(100% - 40px);
+  height: 220px;
+  object-fit: cover;
+  margin: 20px;
+}
+
+.project-card-body {
+  padding: 15px;
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.project-tech-container {
+  margin-top: 10px;
+}
+
+.tech-icon-container {
+  display: inline-block; /* Affiche les icônes sur une ligne sans espace */
+  margin-right: 10px; /* Applique un espacement entre les icônes */
+  vertical-align: middle; /* Aligne verticalement les icônes si nécessaire */
+
+  .tech-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+
+
+.project-card-description {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 15px;
+}
