@@ -9,7 +9,9 @@ module ApplicationHelper
       "PostgreSQL" => { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
       "GitHub" => { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
       "Bootstrap" => { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
-      "Tailwind CSS" => { name: "Tailwind CSS", icon: image_path("tailwind.jpg") }
+      "Tailwind CSS" => { name: "Tailwind CSS", icon: image_path("tailwind.jpg") },
+      "HTML" => { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      "CSS" => { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" }
     }
   end
 

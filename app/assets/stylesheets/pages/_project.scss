@@ -6,7 +6,8 @@
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
-  overflow: hidden; /* Empêche tout débordement de contenu à l'extérieur de la carte */
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .project-card:hover {
@@ -24,6 +25,7 @@
 
 .project-card-body {
   padding: 15px;
+  position: relative;
 }
 
 .project-card-title {
@@ -37,9 +39,9 @@
 }
 
 .tech-icon-container {
-  display: inline-block; /* Affiche les icônes sur une ligne sans espace */
-  margin-right: 10px; /* Applique un espacement entre les icônes */
-  vertical-align: middle; /* Aligne verticalement les icônes si nécessaire */
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
 
   .tech-icon {
     width: 25px;
@@ -47,11 +49,67 @@
   }
 }
 
-
-
-
 .project-card-description {
   font-size: 0.95rem;
   color: #555;
   margin-top: 15px;
+}
+
+.project-button {
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project-button:hover {
+  color: rgb(255, 255, 255);
+}
+.project1{
+  background-color: #D5E1EF;
+  &:hover {
+    background-color: #3684FE;
+  }
+}
+.project2{
+  background-color: #F5D04E;
+  &:hover {
+    background-color: #f5d14ee8;
+  }
+}
+
+.project3{
+  background-color: #141414;
+  &:hover {
+    background-color: #1F1F1F;
+  }
+}
+
+.project4{
+  background-color: #F3E5D8;
+  &:hover {
+    background-color: #f3e5d8c5;
+  }
+}
+.project5{
+  background-color: #5F3FFC;
+  &:hover {
+    background-color: #4C22CA;
+  }
+}
+.arrow-right {
+  display: inline-block;
+  margin-left: 8px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid white; /* Couleur de la flèche */
+}
+
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
 }

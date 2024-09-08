@@ -60,80 +60,78 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px; /* Espacement entre les icônes */
+  gap: 20px;
 }
 
-/* Conteneur individuel pour chaque icône technologique */
+
 .home-tech-icon-container {
-  flex: 0 0 100px; /* Taille fixe pour chaque conteneur */
+  flex: 0 0 100px;
   text-align: center;
-  position: relative; /* Position relative pour gérer l'overlay du nom */
-  margin-bottom: 60px; /* Ajout d'un plus grand espace entre les lignes */
+  position: relative;
+  margin-bottom: 60px;
 }
 
-/* Style des images des icônes */
+
 .home-tech-icon {
-  width: 100px; /* Largeur des icônes */
-  height: 100px; /* Hauteur égale pour une meilleure proportion */
-  border: 2px solid #fff; /* Bordure blanche autour des icônes */
-  border-radius: 10px; /* Coins légèrement arrondis */
-  padding: 5px; /* Espace autour des icônes */
-  transition: all 0.3s ease-in-out; /* Transition fluide pour les effets de hover */
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Effet au survol des icônes */
 .home-tech-icon:hover {
-  transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Ombre pour donner de la profondeur */
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Nom des technologies sous les icônes (caché par défaut) */
+
 .home-tech-name {
   position: absolute;
-  bottom: -35px; /* Espace augmenté entre l'icône et le nom */
+  bottom: -35px;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0; /* Caché par défaut */
-  transition: opacity 0.3s ease-in-out; /* Transition pour faire apparaître le nom */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
   font-size: 1em;
   color: #333;
-  white-space: nowrap; /* Empêche le texte de passer à la ligne */
-  overflow: hidden; /* Coupe le texte si trop long */
-  text-overflow: ellipsis; /* Affiche des points de suspension si le texte est trop long */
-  max-width: 120px; /* Largeur maximale pour le nom de la technologie */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
 }
 
-/* Afficher le nom au survol de l'icône */
+
 .home-tech-icon-container:hover .home-tech-name {
-  opacity: 1; /* Le texte devient visible au survol */
+  opacity: 1;
 }
 
 @media (min-width: 768px) {
   .home-tech-icon-container {
-    flex: 0 0 120px; /* Taille plus grande sur les écrans moyens */
+    flex: 0 0 120px;
   }
 
   .home-tech-name {
-    max-width: 140px; /* Largeur maximale plus grande sur les écrans moyens */
+    max-width: 140px;
   }
 }
 
 @media (min-width: 1200px) {
   .home-tech-icon-container {
-    flex: 0 0 140px; /* Taille encore plus grande pour les écrans larges */
+    flex: 0 0 140px;
   }
 
   .home-tech-name {
-    max-width: 160px; /* Largeur maximale plus grande sur les écrans larges */
+    max-width: 160px;
   }
 }
 
-/* Nouvelle classe spécifique pour la carte de la page d'accueil */
 .card-home {
-  border-radius: 8px; /* Arrondir les bords de la carte */
-  background-color: #f8f9fa; /* Couleur de fond de la carte */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  padding: 2em; /* Espacement interne de la carte */
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2em;
 }
 
 .card-home .card-text {
